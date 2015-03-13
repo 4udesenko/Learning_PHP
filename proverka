@@ -1,0 +1,16 @@
+function rules($name)
+{
+    $rules1 = [
+        'odmins' => ['odmin1', 'odmin2'],
+        'users' => ['user1', 'user2', 'user3', 'user4', 'odmin1', 'odmin2'],
+    ];
+
+    $rules2 = $rules1['odmins'];
+
+    if (in_array($name, $rules2)) {
+        echo 'Доступ открыт';
+    } else {
+        echo 'Доступ закрыт';
+    }
+}
+echo rules('user3');
