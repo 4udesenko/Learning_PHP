@@ -6,7 +6,7 @@ foreach ($image as $item):
     ?>
         <div>
             <a href="index.php?view=image&id=<?php echo $item['id']; ?>">
-            <img class="img" src="./images/<?php echo $item['image']; ?>">
+                <img class="img" src="./images/<?php echo $item['image']; ?>">
             </a>
             <hr>
             <h3><?php echo $item['tittle']; ?></h3>
