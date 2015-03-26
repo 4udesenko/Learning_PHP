@@ -7,14 +7,7 @@ div {
     padding: 10px;
 }
 
-.image {
-    border: 1px solid #009999;
-    border-radius: 15px;
-    text-align: center;
-    padding: 10px;
-}
-
-div:hover {
+img:hover {
     background: #cdf5ff;
 }
 
