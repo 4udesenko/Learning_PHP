@@ -6,8 +6,6 @@
 </head>
 <body>
 
-<h1>Галерея изображений</h1>
-
 <?php include(ROOT . '/pages/' . $view . '.php') ?>
 
 </body>
