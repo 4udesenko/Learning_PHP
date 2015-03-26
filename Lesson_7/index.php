@@ -1,7 +1,7 @@
 <?php
 
 define('ROOT', __DIR__);
-include('db_fns.php');
+include(ROOT . '/db_fns.php');
 
 $view = empty($_GET['view']) ? 'images' : $_GET['view'];
 
