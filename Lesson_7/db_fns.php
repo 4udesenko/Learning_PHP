@@ -41,3 +41,22 @@ function get_image($id)
     $result = db_result_to_array($result);
     return $result;
 }
+
+function add_to_gallery($tittle, $img)
+{
+    db_connect();
+    $query = "INSERT INTO images (tittle, image, date) VALUES ('$tittle', '$img', CURRENT_DATE)";
+    $result = mysql_query($query);
+    return $result;
+}
+
+function process($files)
+{
+    $result = [];
+    foreach ($files as $item) {
+        if ($files[$item] != "." && $files[$item] != "..") {
+            $result[] = $files[$item];
+        }
+    }
+    return $result;
+}
