@@ -13,15 +13,11 @@ switch ($view) {
         $id = $_GET['id'];
         $image = get_image($id);
         break;
-    case('add_to_gallery'):
-        add_to_gallery();
-        header('Location: /index.php?view=images');
-        break;
     case('form'):
         break;
 }
 
-$arr = ['images', 'image', 'add_to_gallery', 'form'];
+$arr = ['images', 'image', 'form'];
 if (!in_array($view, $arr)) die('Такого адреса не существует');
 
 include(ROOT . '/layout/gallery.php');
