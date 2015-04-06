@@ -12,4 +12,4 @@
     echo('Размер файла: ' . round($mb, 2) . ' Мб.');
     ?>
 </div>
-<h4><a href="./index.php">Вернуться в галерею</a></h4>
+<h4><a href="./index.php?view=images">Вернуться в галерею</a></h4>
