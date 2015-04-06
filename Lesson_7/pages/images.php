@@ -1,7 +1,7 @@
 <h1>Галерея изображений</h1>
 
 <?php
-$image = get_images();
+$image = getImages();
 foreach ($image as $item):
     ?>
     <div>

@@ -17,7 +17,7 @@ if (is_uploaded_file($_FILES['image']['tmp_name'])) {
             $_FILES['image']['tmp_name'],
             "$dir/$newName"
         );
-        add_to_gallery($_POST['tittle'], $_FILES['image']['name']);
+        addToGallery($_POST['tittle'], $_FILES['image']['name']);
         echo 'Изображение добавлено';
         echo('<p><a href="index.php?view=form">Вернуться к форме</a></p>');
         echo('<p><a href="index.php?view=images">Вернуться в галерею</a></p>');

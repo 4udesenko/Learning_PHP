@@ -7,11 +7,11 @@ $view = empty($_GET['view']) ? 'images' : $_GET['view'];
 
 switch ($view) {
     case('images'):
-        $images = get_images();
+        $images = getImages();
         break;
     case('image'):
         $id = $_GET['id'];
-        $image = get_image($id);
+        $image = getImage($id);
         break;
     case('form'):
         break;

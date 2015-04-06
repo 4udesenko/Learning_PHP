@@ -15,7 +15,7 @@ function db_connect()
     return $connection;
 }
 
-function db_result_to_array($result)
+function dbResultToArray($result)
 {
     $res_array = [];
     while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
@@ -24,25 +24,25 @@ function db_result_to_array($result)
     return $res_array;
 }
 
-function get_images()
+function getImages()
 {
     db_connect();
     $query = "SELECT * FROM images";
     $result = mysql_query($query);
-    $result = db_result_to_array($result);
+    $result = dbResultToArray($result);
     return $result;
 }
 
-function get_image($id)
+function getImage($id)
 {
     db_connect();
     $query = "SELECT * FROM images WHERE id='$id'";
     $result = mysql_query($query);
-    $result = db_result_to_array($result);
+    $result = dbResultToArray($result);
     return $result;
 }
 
-function add_to_gallery($tittle, $img)
+function addToGallery($tittle, $img)
 {
     db_connect();
     $query = "INSERT INTO images (tittle, image, date) VALUES ('$tittle', '$img', CURRENT_DATE)";
